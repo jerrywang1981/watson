@@ -1,10 +1,3 @@
-# watson
-watson utility packages
-
-
-
-# assistant
-```
 package assistant
 
 import "testing"
@@ -21,4 +14,3 @@ func TestAssistant(t *testing.T) {
 	output := bot.Send(msg)
 	t.Logf("%+v", output)
 }
-```

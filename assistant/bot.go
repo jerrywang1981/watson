@@ -10,12 +10,17 @@ import (
 // global watson bot
 var Bot *WABot
 
+const API_VERSION = "2020-04-01"
+
 func ConnectWA(c *WAConfig) *WABot {
 	Bot = NewSession(c)
 	return Bot
 }
 
 func NewSession(c *WAConfig) *WABot {
+	if c.Version == "" {
+		c.Version = API_VERSION
+	}
 	bot := &WABot{
 		config: c,
 	}
